@@ -52,7 +52,7 @@ function Signup() {
                     size={"large"}
                     variant="contained"
                     onClick={async() => {
-                        const response = await axios.post(`${BASE_URL}/admin/login`, {
+                        const response = await axios.post(`${BASE_URL}/admin/signup`, {
                             username: email,
                             password: password
                         })
