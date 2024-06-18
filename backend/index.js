@@ -4,7 +4,6 @@ const cors = require('cors');
 const adminRouter = require("./routes/admin");
 const userRouter = require("./routes/user");
 
-
 const app = express();
 
 app.use(cors());
@@ -16,15 +15,13 @@ app.get("/", (req, res) => {
 app.use("/admin", adminRouter)
 app.use("/user", userRouter)
 
-
 // Connect to MongoDB
 // DONT MISUSE THIS THANKYOU!!
 
 
-
 const connectDB = async () => {
     try {
-        const connectionInstance = await mongoose.connect('mongodb+srv://shashwat:shashwat@cluster0.raimqqs.mongodb.net/courses')
+        const connectionInstance = await mongoose.connect('mongodb+srv://shashwat:shashwatpal@cluster0.raimqqs.mongodb.net/courses')
         console.log(`\n MongoDB connected !! DB HOST: ${connectionInstance.connection.host}`);
     } catch (error) {
         console.log("MONGODB connection FAILED ", error);
